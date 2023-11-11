@@ -11,15 +11,17 @@
     <p class="form"></p>
     <script>
         var formElement = document.querySelector('.form');
-        window.addEventListener("message", function (event) {
-        if (!isJSONValid(event.data)) {
-            return;
-        }
+        window.parent.postMessage('chatwoot-dashboard-app:fetch-info', '*')
 
-        const eventData = JSON.parse(event.data);
-        console.log(eventData)
-        formElement.textContent = eventData;
-        });
+        // window.addEventListener("message", function (event) {
+        // if (!isJSONValid(event.data)) {
+        //     return;
+        // }
+
+        // const eventData = JSON.parse(event.data);
+        // console.log(eventData)
+        // formElement.textContent = eventData;
+        // });
         
         
         
