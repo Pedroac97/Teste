@@ -10,16 +10,19 @@
     <h1>V4 Teste</h1>
     <p class="form"></p>
     <script>
+        var formElement = document.querySelector('.form');
         window.addEventListener("message", function (event) {
         if (!isJSONValid(event.data)) {
             return;
         }
 
         const eventData = JSON.parse(event.data);
-        });
         console.log(eventData)
-        var formElement = document.querySelector('.form');
         formElement.textContent = eventData;
+        });
+        
+        
+        
     </script>
 </body>
 </html>
