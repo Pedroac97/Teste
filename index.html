@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<h1>V4 Teste</h1>
+
 <body>
+    <h1>V4 Teste</h1>
+    <p class="form"></p>
     <script>
         window.addEventListener("message", function (event) {
         if (!isJSONValid(event.data)) {
@@ -15,7 +17,9 @@
 
         const eventData = JSON.parse(event.data);
         });
-        console.log()
+        console.log(eventData)
+        var formElement = document.querySelector('.form');
+        formElement.textContent = eventData;
     </script>
 </body>
 </html>
